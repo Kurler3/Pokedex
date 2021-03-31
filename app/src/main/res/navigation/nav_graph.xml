@@ -3,11 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/mainScreen">
+    app:startDestination="@id/pokedex">
 
     <fragment
         android:id="@+id/mainScreen"
         android:name="com.miguel.pokedex.ui.MainScreen"
         android:label="dashboard_layout"
         tools:layout="@layout/dashboard_layout" />
+    <fragment
+        android:id="@+id/pokedex"
+        android:name="com.miguel.pokedex.ui.Pokedex"
+        android:label="pokedex_fragment"
+        tools:layout="@layout/pokedex_fragment" />
 </navigation>

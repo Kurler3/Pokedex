@@ -6,7 +6,10 @@ import androidx.fragment.app.Fragment
 import com.miguel.pokedex.R
 import com.miguel.pokedex.databinding.DashboardLayoutBinding
 import com.miguel.pokedex.recyclerviews.MainScreenItemAdapter
+import com.miguel.pokedex.recyclerviews.MainScreenNewsAdapter
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainScreen : Fragment(R.layout.dashboard_layout) {
 
     var _binding : DashboardLayoutBinding? = null
@@ -22,6 +25,10 @@ class MainScreen : Fragment(R.layout.dashboard_layout) {
         binding.apply {
             mainScreenItemRecyclerView.apply {
                 adapter = MainScreenItemAdapter()
+            }
+
+            newsRecyclerView.apply {
+                adapter = MainScreenNewsAdapter()
             }
         }
     }
